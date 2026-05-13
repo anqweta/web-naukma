@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+.wrapper {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+    font-size: 16px;
+    margin: 0 auto;
+}
+/* HEADER */
+#header {
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo, h2 {
+    color: #378ace;
+    font-size: 24px;
+    font-weight: 700;
+}
+.menu__list, .footer__list {
+    list-style: none;   
+    display: flex;
+    gap: 20px;
+}
+.list__item > a {
+    text-decoration: none;
+    color: #000000;
+}
+#header > button, .form-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #378ace;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #c3c3c3;
+    border: none;
+}
+/* MAIN */
+.section-display {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.section-main {
+    width: 60%;
+}
+.section-main > div {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 50px;
+}
+.section-main > h1 {
+    margin: 20px 0;
+}
+.section-main > h2 {
+    font-size: 18px;
+    color: #8d8d8d;
+    margin-bottom: 10px;
+}
+.section-main > ul {
+    display: flex;
+    gap: 20px;
+    color: #8d8d8d;
+}
+.section-main > ul > li:first-child {
+    list-style-type: none;
+}
+/* ASIDE */
+.aside {
+    width: 40%;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+.arcticles, .subscribe {
+    min-width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+}
+.subscribe {
+    margin-top: 20px;
+}
+.form-button {
+    margin-top: 10px;
+    width: 90%;
+}
+h3 {
+    color: #378ace;
+}
+.subscribe > p {
+    margin-top: 10px;
+}
+.arcticles > ul {
+    margin-top: 10px;
+    list-style: none;
+}
+.arcticles > ul > li {
+    margin-bottom: 10px;
+}
+.arcticles > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+/* SECTION1 INFORM-TOOLS */ 
+.inform-tools {
+    margin-top: 20px;
+}
+.inform-tools, .inform-error, .inform-table {
+    margin-top: 30px;
+}
+.inform-tools > p, .inform-error > p, .inform-table > p {
+    margin-top: 10px;
+}
+.inform-error > ul {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* Footer */
+#footer {
+    width: 100%;
+    height: 75px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #e0e0e0;
+}
+#footer > p {
+    color: #8d8d8d;
+}
+#footer > span {
+    color: #7d7d7d;
+    font-weight: 700;
+}
