@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shopping-list">
+        <form action="search">
+          <input type="search" name="q" placeholder="Назва товару" />
+          <button data-tooltip="tooltip" class="form__button" type="submit">
+            Додати
+          </button>
+        </form>
+        <div class="list-item">
+          <p><s>Помідори</s></p>
+          <div>2</div>
+          <button data-tooltip="tooltip" class="item__button">
+            Не куплено
+          </button>
+        </div>
+        <div class="list-item">
+          <p>Печиво</p>
+          <div class="inner__button">
+            <button data-tooltip="tooltip" class="button-red">+</button>
+            <div class="">2</div>
+            <button data-tooltip="tooltip" class="button-green">-</button>
+          </div>
+          <button data-tooltip="tooltip" class="item__button">Куплено</button>
+        </div>
+        <div class="list-item">
+          <input
+            type="text"
+            id="item-input"
+            placeholder="Введіть назву товару"
+          />
+          <div class="inner__button">
+            <button data-tooltip="tooltip" class="button-red">+</button>
+            <div>2</div>
+            <button data-tooltip="tooltip" class="button-green">-</button>
+          </div>
+          <button data-tooltip="tooltip" class="item__button">Куплено</button>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h2>Залишилося</h2>
+        <div class="inner-item">
+          <div>Печиво <span>2</span></div>
+          <div>Сир <span>1</span></div>
+        </div>
+        <h2>Куплено</h2>
+        <div class="inner-item">
+          <div>Помідори <span>2</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="badge">
+      Buy List
+      <p>
+        Created by: <br />
+        Anna Martazina
+      </p>
+    </div>
+  </body>
+</html>
