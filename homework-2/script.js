@@ -4,7 +4,7 @@ let products = JSON.parse(localStorage.getItem('shoppingList')) || [
     {
         id: 1,
         name: 'Помідори',
-        count: 2,
+        count: 3,
         isBought: false
     },
     {
