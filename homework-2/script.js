@@ -4,7 +4,7 @@ let products = JSON.parse(localStorage.getItem('shoppingList')) || [
     {
         id: 1,
         name: 'Помідори',
-        count: 2,
+        count: 3,
         isBought: false
     },
     {
@@ -21,7 +21,7 @@ let products = JSON.parse(localStorage.getItem('shoppingList')) || [
     }
 ]
 
-let nextId = 4;
+let nextId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
 
 const container = document.querySelector('.shopping-list');
 const remainContainer = document.getElementById('remaining');
@@ -31,9 +31,13 @@ renderProducts();
 addNewProduct();
 
 container.addEventListener('click', (event) => {
-    const productId = event.target.closest('[data-id]').dataset.id;
-    
+    const productItem = event.target.closest('[data-id]');
 
+    if (!productItem) {
+        return; 
+    }
+
+    const productId = productItem.dataset.id;
     const foundProduct = products.find(product => product.id === parseInt(productId));
 
     const redButton = event.target.closest('.button-red');
@@ -102,7 +106,13 @@ function changeNameOfProduct(productId) {
 function addNewProduct() { 
     const addNewProductInput = document.getElementById('addNewProduct');
     const addButton = document.getElementById('addButton');
-    const addItem = event => {if (addNewProductInput.value.trim() !== '') {
+    const addItem = (event) => {
+        
+        if (event) {
+            event.preventDefault();
+        }
+
+        if (addNewProductInput.value.trim() !== '') {
             products.push({
                 id: nextId,
                 name: addNewProductInput.value.trim(),
@@ -115,11 +125,11 @@ function addNewProduct() {
            }}
     addNewProductInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-            addItem();
+            addItem(event);
         }
     });
     addButton.addEventListener('click', () => {
-        addItem();
+        addItem(event);
     });
         renderProducts();
 }
