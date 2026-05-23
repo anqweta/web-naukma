@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Martazina Anna - homework 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shopping-list">
+        <form onsubmit="event.preventDefault()" action="search">
+          <input
+            id="addNewProduct"
+            type="search"
+            name="q"
+            placeholder="Назва товару"
+          />
+          <button
+            id="addButton"
+            data-tooltip="Знайти та додати товар"
+            class="form__button"
+            type="submit"
+          >
+            Додати
+          </button>
+        </form>
+        <div class="list-item">
+          <p class="product__name">Помідори</p>
+          <div><p class="count-product">2</p></div>
+          <button data-tooltip="tooltip" class="item__button">Купити</button>
+        </div>
+        <div class="list-item">
+          <p class="product__name">Печиво</p>
+          <div class="inner__button">
+            <button data-tooltip="tooltip" class="button-red">+</button>
+            <div class=""><p class="count-product">2</p></div>
+            <button data-tooltip="tooltip" class="button-green">-</button>
+          </div>
+          <button data-tooltip="tooltip" class="item__button">Купити</button>
+        </div>
+        <div class="list-item">
+          <p class="product__name">Сир</p>
+          <div class="inner__button">
+            <button data-tooltip="tooltip" class="button-red">+</button>
+            <div><p class="count-product">2</p></div>
+            <button data-tooltip="tooltip" class="button-green">-</button>
+          </div>
+          <div class="inner__button">
+            <button data-tooltip="tooltip" class="item__button button-delete">
+              Видалити
+            </button>
+            <button data-tooltip="tooltip" class="item__button button-buy">
+              Купити
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h2>Залишилося</h2>
+        <div id="remaining" class="inner-item">
+          <div>Печиво <span>2</span></div>
+          <div>Сир <span>1</span></div>
+        </div>
+        <h2>Куплено</h2>
+        <div id="bought" class="inner-item">
+          <div>Помідори <span>2</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="badge">
+      Buy List
+      <p>
+        Created by: <br />
+        Anna Martazina
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
